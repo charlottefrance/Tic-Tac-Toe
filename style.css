@@ -1,0 +1,68 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, #bafab9, #e9d2ba);
+}
+
+.title {
+  color: black;
+}
+.title h1 {
+  font-size: 60px;
+  font-weight: 800;
+  display: flex;
+  justify-content: center;
+}
+.title h2 {
+  font-size: 40px;
+  font-style: italic;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+}
+.title h3, .title h4, .title h5 {
+  font-size: 25px;
+  font-weight: 400;
+  font-style: italic;
+  display: flex;
+  justify-content: center;
+}
+
+.reset {
+  display: flex;
+  justify-content: center;
+}
+.reset button {
+  width: 150px;
+  height: 40px;
+  outline: none;
+  background-color: #e9d2ba;
+  border-radius: 5px;
+}
+.reset button:hover {
+  cursor: pointer;
+  background-color: white;
+}
+
+.tictactoe {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  padding-top: 40px;
+  grid-template-columns: repeat(3, 170px);
+  grid-template-rows: repeat(3, 170px);
+}
+.tictactoe button {
+  background-color: #a7835f;
+  font-size: 150px;
+  color: #382410;
+  font-style: bolder;
+}
+.tictactoe button:hover {
+  cursor: pointer;
+  background-color: #9e7043;
+}
