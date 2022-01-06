@@ -12,7 +12,7 @@ body {
   color: black;
 }
 .title h1 {
-  font-size: 60px;
+  font-size: 50px;
   font-weight: 800;
   display: flex;
   justify-content: center;
@@ -25,16 +25,26 @@ body {
   justify-content: center;
 }
 .title h3, .title h4, .title h5 {
-  font-size: 25px;
+  font-size: 15px;
   font-weight: 400;
   font-style: italic;
   display: flex;
   justify-content: center;
 }
 
+.status {
+  display: flex;
+  justify-content: center;
+  font-size: 35px;
+  font-weight: 800;
+  font-style: italic;
+  color: #741310;
+}
+
 .reset {
   display: flex;
   justify-content: center;
+  padding-top: 10px;
 }
 .reset button {
   width: 150px;
@@ -48,21 +58,21 @@ body {
   background-color: white;
 }
 
-.tictactoe {
+.container {
   display: grid;
   justify-content: center;
   align-content: center;
-  padding-top: 40px;
+  padding-top: 20px;
   grid-template-columns: repeat(3, 170px);
   grid-template-rows: repeat(3, 170px);
 }
-.tictactoe button {
+.container button {
   background-color: #a7835f;
   font-size: 150px;
   color: #382410;
   font-style: bolder;
 }
-.tictactoe button:hover {
+.container button:hover {
   cursor: pointer;
   background-color: #9e7043;
 }

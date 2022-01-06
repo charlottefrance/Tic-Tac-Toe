@@ -12,7 +12,7 @@ body {
     color: black;
     
     h1 {
-        font-size: 60px;
+        font-size: 50px;
         font-weight: 800;
         display: flex;
         justify-content: center;
@@ -27,7 +27,7 @@ body {
     }
 
     h3, h4, h5 {
-        font-size: 25px;
+        font-size: 15px;
         font-weight: 400;
         font-style: italic;
         display: flex;
@@ -35,9 +35,19 @@ body {
     }
 }
 
+.status {
+    display: flex;
+    justify-content: center;
+    font-size: 35px;
+    font-weight: 800;
+    font-style: italic;
+    color:rgb(116, 19, 16);
+}
+
 .reset {
     display: flex;
     justify-content: center;
+    padding-top: 10px;
     
     button {
         width: 150px;
@@ -53,13 +63,11 @@ body {
     }
 }
 
-
-
-.tictactoe {
+.container {
     display: grid;
     justify-content: center;
     align-content: center;
-    padding-top: 40px;
+    padding-top: 20px;
     grid-template-columns: repeat(3, 170px);
     grid-template-rows: repeat(3, 170px);
 
