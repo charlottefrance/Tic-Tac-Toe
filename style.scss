@@ -36,6 +36,7 @@ body {
 }
 
 .status {
+    height: 50px;
     display: flex;
     justify-content: center;
     font-size: 35px;
@@ -44,43 +45,56 @@ body {
     color:rgb(116, 19, 16);
 }
 
-.reset {
-    display: flex;
-    justify-content: center;
-    padding-top: 10px;
-    
-    button {
-        width: 150px;
-        height: 40px;
-        outline: none;
-        background-color: rgb(233, 210, 186);
-        border-radius: 5px;
-    }
+.restart {
+    border-radius: 5px;
+    font-weight: bolder;
+    height: 30px;
+    width: 100px;
+    background-color: rgb(214, 178, 141);
+}
 
-    button:hover {
-        cursor: pointer;
-        background-color: white;
-    }
+.restart:hover {
+    background-color: white;
+    cursor: pointer;
 }
 
 .container {
     display: grid;
     justify-content: center;
-    align-content: center;
-    padding-top: 20px;
-    grid-template-columns: repeat(3, 170px);
     grid-template-rows: repeat(3, 170px);
+    grid-template-columns: repeat(3, 170px);
 
-    button {
+    .grid {
         background-color: rgb(167, 131, 95);
+        border: 2.5px solid black;
         font-size: 150px;
-        color: rgb(56, 36, 16);
-        font-style: bolder;
     }
-
-    button:hover {
+    
+    .grid:hover {
         cursor: pointer;
         background-color: rgb(158, 112, 67);
     }
 }
 
+// .container {
+//     display: grid;
+//     justify-content: center;
+//     align-content: center;
+//     padding-top: 20px;
+//     grid-template-columns: repeat(3, 170px);
+//     grid-template-rows: repeat(3, 170px);
+// }
+
+// .grid {
+//     background-color: rgb(167, 131, 95);
+//     border-color: black;
+//     border-width: 3px;
+//     font-size: 150px;
+//     color: rgb(56, 36, 16);
+//     font-style: bolder;
+// }
+
+// .grid:hover {
+//     cursor: pointer;
+//     background-color: rgb(158, 112, 67);
+// }

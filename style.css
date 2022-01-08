@@ -33,6 +33,7 @@ body {
 }
 
 .status {
+  height: 50px;
   display: flex;
   justify-content: center;
   font-size: 35px;
@@ -41,38 +42,31 @@ body {
   color: #741310;
 }
 
-.reset {
-  display: flex;
-  justify-content: center;
-  padding-top: 10px;
-}
-.reset button {
-  width: 150px;
-  height: 40px;
-  outline: none;
-  background-color: #e9d2ba;
+.restart {
   border-radius: 5px;
+  font-weight: bolder;
+  height: 30px;
+  width: 100px;
+  background-color: #d6b28d;
 }
-.reset button:hover {
-  cursor: pointer;
+
+.restart:hover {
   background-color: white;
+  cursor: pointer;
 }
 
 .container {
   display: grid;
   justify-content: center;
-  align-content: center;
-  padding-top: 20px;
-  grid-template-columns: repeat(3, 170px);
   grid-template-rows: repeat(3, 170px);
+  grid-template-columns: repeat(3, 170px);
 }
-.container button {
+.container .grid {
   background-color: #a7835f;
+  border: 2.5px solid black;
   font-size: 150px;
-  color: #382410;
-  font-style: bolder;
 }
-.container button:hover {
+.container .grid:hover {
   cursor: pointer;
   background-color: #9e7043;
 }
