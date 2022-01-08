@@ -1,36 +1,15 @@
-const statusUpdate = document.querySelector('status')
+const statusDisplay = document.querySelector('.status');
 
 let gameActive = true;
 let currentPlayer = "X";
 let gameState = ["", "", "", "", "", "", "", ""];
 
-const winner = () => `Player ${currentPlayer}! You've won!`;
-const draw = () => `Its a draw!`;
+
+const winningMessage = () => `Player ${currentPlayer}! You've won!`;
+const drawMessage =() => `Its a draw!`;
 const currentPlayerTurn = () => `It's your turn ${currentPlayer}!`
 
-statusUpdate.innerHTML = currentPlayerTurn();
-
-function handleSquarePlayed(clickedSquare, clickedSquareIndex) {
-    gameState[clickedSquareIndex] = currentPlayer;
-    clickedSquare.innerHTML = currentPlayer;
-}
-
-function handlePlayerChange() {
-    currentPlayer = currentPlayer === "X" ? "O" : "X";
-    statusDisplay.innerHTML = currentPlayerTurn();
-}
-
-function handleSquareClick(clickedSquareEvent) {
-    const clickedSquare = clickedSquareEvent.target;
-    const clickedSquareIndex = parseInt(
-        clickedSquare.getAttribute('grid-number')
-    );
-    if (gameState[clickedSquareIndex] !== "" || !gameActive) {
-        return;
-    }
-    handleSquarePlayed(clickedSquare, clickedSquareIndex);
-    handleResultValidation();
-}
+statusDisplay.innerHTML = currentPlayerTurn();
 
 const winningPossibility = [
     [0, 1, 2],
@@ -43,13 +22,23 @@ const winningPossibility = [
     [2, 4, 6]
 ];
 
+function handleSquarePlayed(clickedSquare, clickedSquareIndex) {
+    gameState[clickedSquareIndex] = currentPlayer;
+    clickedSquare.innerHTML = currentPlayer;
+}
+
+function handlePlayerChange() {
+    currentPlayer = currentPlayer === "X" ? "O" : "X";
+    statusDisplay.innerHTML = currentPlayerTurn();
+}
+
 function handleResultValidation() {
     let roundWon = false;
     for (let i = 0; i <= 7; i++) {
-        const winCondition = winningConditions[i];
-        let a = gamestate[winCondition[0]];
-        let b = gameState[winCondition[1]];
-        let c = gameState[winCondition[2]];
+        const winPoss = winningPossibility[i];
+        let a = gameState[winPoss[0]];
+        let b = gameState[winPoss[1]];
+        let c = gameState[winPoss[2]];
         if (a === '' || b === '' || c === '') {
             continue;
         }
@@ -62,7 +51,7 @@ function handleResultValidation() {
     if (roundWon) {
         statusDisplay.innerHTML = winningMessage();
         gameActive = false;
-        return
+        return;
     }
 
     let roundDraw = !gameState.includes("");
@@ -75,13 +64,25 @@ function handleResultValidation() {
     handlePlayerChange();
 }
 
+function handleSquareClick(clickedSquareEvent) {
+    const clickedSquare = clickedSquareEvent.target;
+    const clickedSquareIndex = parseInt(
+        clickedSquare.getAttribute('data-cell-index'));
+
+    if (gameState[clickedSquareIndex] !== "" || !gameActive) {
+        return;
+    }
+    handleSquarePlayed(clickedSquare, clickedSquareIndex);
+    handleResultValidation();
+}
+
 function handleRestartGame() {
     gameActive = true;
     currentPlayer = "X";
     gameState = ["", "", "", "", "", "", "", ""];
     statusDisplay.innerHTML = currentPlayerTurn();
-    document.querySelectorAll('.cell').forEach(cell => cell.innerHTML = "");
+    document.querySelectorAll('.grid').forEach(grid => grid.innerHTML = "");
 }
 
-document.querySelectorAll('.grid').forEach(grid => grid.addEventListener('click', handleSquarePlayed));
+document.querySelectorAll('.grid').forEach(grid => grid.addEventListener('click', handleSquareClick));
 document.querySelector('.restart').addEventListener('click', handleRestartGame);
