@@ -68,6 +68,9 @@ body {
         background-color: rgb(167, 131, 95);
         border: 2.5px solid black;
         font-size: 150px;
+        display: flex;
+        justify-content: center;
+        align-content: center;
     }
     
     .grid:hover {

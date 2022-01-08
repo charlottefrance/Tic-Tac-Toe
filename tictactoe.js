@@ -86,3 +86,4 @@ function handleRestartGame() {
 
 document.querySelectorAll('.grid').forEach(grid => grid.addEventListener('click', handleSquareClick));
 document.querySelector('.restart').addEventListener('click', handleRestartGame);
+
