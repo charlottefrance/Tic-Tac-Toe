@@ -75,6 +75,13 @@ function handleResultValidation() {
     handlePlayerChange();
 }
 
+function handleRestartGame() {
+    gameActive = true;
+    currentPlayer = "X";
+    gameState = ["", "", "", "", "", "", "", ""];
+    statusDisplay.innerHTML = currentPlayerTurn();
+    document.querySelectorAll('.cell').forEach(cell => cell.innerHTML = "");
+}
 
 document.querySelectorAll('.grid').forEach(grid => grid.addEventListener('click', handleSquarePlayed));
 document.querySelector('.restart').addEventListener('click', handleRestartGame);
