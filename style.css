@@ -64,11 +64,11 @@ body {
 .container .grid {
   background-color: #a7835f;
   border: 2.5px solid black;
+  border-radius: 2px;
+  box-shadow: 10px 10px 5px 5px #948068;
   font-size: 150px;
   font-weight: 700;
-  display: flex;
-  justify-content: center;
-  align-content: center;
+  text-align: center;
 }
 .container .grid:hover {
   cursor: pointer;

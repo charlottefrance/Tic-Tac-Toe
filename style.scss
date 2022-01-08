@@ -1,3 +1,4 @@
+
 * {
     padding: 0;
     margin: 0;
@@ -67,11 +68,11 @@ body {
     .grid {
         background-color: rgb(167, 131, 95);
         border: 2.5px solid black;
+        border-radius: 2px;
+        box-shadow: 10px 10px 5px 5px rgb(148, 128, 104);
         font-size: 150px;
         font-weight: 700;
-        display: flex;
-        justify-content: center;
-        align-content: center;
+        text-align: center;
     }
     
     .grid:hover {

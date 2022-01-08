@@ -2,7 +2,7 @@ const statusDisplay = document.querySelector('.status');
 
 let gameActive = true;
 let currentPlayer = "X";
-let gameState = ["", "", "", "", "", "", "", ""];
+let gameState = ["", "", "", "", "", "", "", "", ""];
 
 
 const winningMessage = () => `Player ${currentPlayer}! You've won!`;
@@ -79,7 +79,7 @@ function handleSquareClick(clickedSquareEvent) {
 function handleRestartGame() {
     gameActive = true;
     currentPlayer = "X";
-    gameState = ["", "", "", "", "", "", "", ""];
+    gameState = ["", "", "", "", "", "", "", "", ""];
     statusDisplay.innerHTML = currentPlayerTurn();
     document.querySelectorAll('.grid').forEach(grid => grid.innerHTML = "");
 }
