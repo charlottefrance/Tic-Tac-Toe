@@ -15,6 +15,11 @@ function handleSquarePlayed(clickedSquare, clickedSquareIndex) {
     clickedSquare.innerHTML = currentPlayer;
 }
 
+function handlePlayerChange() {
+    currentPlayer = currentPlayer === "X" ? "O" : "X";
+    statusDisplay.innerHTML = currentPlayerTurn();
+}
+
 function handleSquareClick(clickedSquareEvent) {
     const clickedSquare = clickedSquareEvent.target;
     const clickedSquareIndex = parseInt(
@@ -26,6 +31,7 @@ function handleSquareClick(clickedSquareEvent) {
     handleSquarePlayed(clickedSquare, clickedSquareIndex);
     handleResultValidation();
 }
+
 
 document.querySelectorAll('.grid').forEach(grid => grid.addEventListener('click', handleSquarePlayed));
 document.querySelector('.restart').addEventListener('click', handleRestartGame);
