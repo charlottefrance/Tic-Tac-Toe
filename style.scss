@@ -13,6 +13,11 @@ body {
     color: black;
     
     h1 {
+        color: white;
+        text-shadow: -2px -2px 0 #000,
+                  2px -2px 0 #000,
+                 -2px 2px 0 #000,
+                  2px 2px 0 #000;
         font-size: 50px;
         font-weight: 800;
         display: flex;
@@ -46,16 +51,34 @@ body {
     color:rgb(116, 19, 16);
 }
 
-.restart {
-    border-radius: 5px;
-    font-weight: bolder;
-    height: 30px;
-    width: 100px;
-    background-color: rgb(214, 178, 141);
+.restartDiv {
+    padding-top: 25px;
+    display: flex;
+    justify-content: center;
+
+    .restart {
+        border-radius: 3px;
+        font-weight: bolder;
+        height: 40px;
+        width: 150px;
+        color: white;
+        background-color: rgb(116, 19, 16);
+        border: 1px solid black;
+    }
 }
+
+// .restart {
+//     border-radius: 5px;
+//     font-weight: bolder;
+//     height: 30px;
+//     width: 100px;
+//     background-color: rgb(214, 178, 141);
+//     padding-left: 50%;
+// }
 
 .restart:hover {
     background-color: white;
+    color: rgb(116, 19, 16);
     cursor: pointer;
 }
 
@@ -64,6 +87,11 @@ body {
     justify-content: center;
     grid-template-rows: repeat(3, 170px);
     grid-template-columns: repeat(3, 170px);
+    color: white;
+    text-shadow: -2px -2px 0 #000,
+                  2px -2px 0 #000,
+                 -2px 2px 0 #000,
+                  2px 2px 0 #000;
 
     .grid {
         background-color: rgb(167, 131, 95);
@@ -80,6 +108,7 @@ body {
         background-color: rgb(158, 112, 67);
     }
 }
+
 
 // .container {
 //     display: grid;
